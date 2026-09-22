@@ -1,0 +1,29 @@
+:root {
+  --color-paper: oklch(96% .009 100);
+  --color-paper-2: oklch(91% .012 100);
+  --color-ink: oklch(17% .007 120);
+  --color-night: oklch(15% .007 120);
+  --color-panel: oklch(21% .006 120);
+  --color-light: oklch(96% .009 100);
+  --color-muted: oklch(52% .01 110);
+  --color-muted-light: oklch(72% .01 110);
+  --color-rule: oklch(80% .012 110);
+  --color-rule-dark: oklch(32% .009 110);
+  --color-accent: oklch(92% .18 121);
+  --color-accent-ink: oklch(36% .08 121);
+  --color-error: oklch(74% .14 28);
+  --color-overlay: oklch(12% .005 120 / .8);
+  --font-display: 'Bahnschrift', 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  --font-body: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  --font-mono: 'Cascadia Code', 'Consolas', monospace;
+  --space-sm: 8px; --space-md: 16px; --space-lg: 24px;
+  --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px;
+  --text-display: clamp(48px, 6.9vw, 112px);
+  --text-heading: clamp(38px, 5.2vw, 84px);
+  --text-body: clamp(16px, 1.45vw, 24px);
+  --ease-out: cubic-bezier(.2,.7,.2,1);
+  --ease-in: cubic-bezier(.4,0,1,1);
+  --ease-in-out: cubic-bezier(.4,0,.2,1);
+  --dur-fast: 180ms; --dur-reveal: 700ms;
+  --rule-hair: 1px; --radius-sm: 4px;
+}
