@@ -3,7 +3,7 @@
   const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
   function sceneTabs(group,panelClass){
     $$(`[data-${group}]`).forEach(button=>{
-      const show=()=>{const name=button.dataset[group];$$(panelClass).forEach(p=>p.hidden=p.id!==group+'-'+name);$$(`[data-${group}]`).forEach(b=>b.setAttribute('aria-pressed',String(b===button)));};
+      const show=()=>{const name=button.dataset[group];if(group==='gitmode' && name!=='video') $('#gitmode-video video').pause();$$(panelClass).forEach(p=>p.hidden=p.id!==group+'-'+name);$$(`[data-${group}]`).forEach(b=>b.setAttribute('aria-pressed',String(b===button)));};
       button.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')show();});button.addEventListener('focus',show);button.addEventListener('click',show);
     });
   }
