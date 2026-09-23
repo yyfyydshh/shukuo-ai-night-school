@@ -136,7 +136,7 @@ const objectUrls = new Map();
 function loadVideo(kind, source) {
   const stage = $(`[data-media="${kind}"]`), video = $('video', stage), empty = $('.media-empty', stage);
   video.src = source; video.hidden = false; empty.hidden = true; $('.media-replace', stage).hidden = false;
-  video.load();
+  if(source.startsWith("blob:")) video.load();
 }
 document.querySelectorAll('[data-video-input]').forEach(input => input.addEventListener('change', () => {
   const file = input.files[0]; if(!file) return;
