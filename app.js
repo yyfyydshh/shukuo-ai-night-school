@@ -35,7 +35,9 @@ function setCurrent(index) {
     button.classList.toggle('active', active);
     if (active) button.setAttribute('aria-current', 'step'); else button.removeAttribute('aria-current');
   });
-  $('.chapter-rail').dataset.tone = scenes[index].classList.contains('dark') ? 'dark' : 'light';
+  const tone = scenes[index].classList.contains('dark') ? 'dark' : 'light';
+  $('.chapter-rail').dataset.tone = tone;
+  document.body.dataset.navTone = tone;
   scenes.forEach((scene, i) => { if(i !== index) scene.querySelectorAll('video').forEach(video => video.pause()); });
   try { history.replaceState(null, '', '#' + scenes[index].id); } catch {}
   updateNotes();

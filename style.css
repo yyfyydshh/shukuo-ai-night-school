@@ -42,3 +42,17 @@ dialog{background:var(--color-paper);color:var(--color-ink);border:1px solid var
 @media(max-width:600px){#prompt-text{font-size:19px;min-height:130px}.repo-fact h3{font-size:30px}}
 
 @media(min-width:900px){.media-stage,.remotion-stage{height:clamp(280px,54vh,620px)}.media-heading h2{font-size:clamp(32px,3.7vw,56px)}#remotion .media-heading h2 br{display:none}}
+/* Quiet transport chrome: paper on light scenes, ink on dark scenes. */
+.masthead{height:68px;padding-inline:4.2vw;transition:background-color 260ms ease,color 260ms ease,border-color 260ms ease}
+.brand-logo{width:34px;height:34px;transition:filter 260ms ease}
+.transport{height:52px;padding-inline:4.2vw;transition:background-color 260ms ease,color 260ms ease,border-color 260ms ease}
+body[data-nav-tone="light"] .masthead,body[data-nav-tone="light"] .transport{background:var(--color-paper);color:var(--color-ink);border-color:var(--color-rule)}
+body[data-nav-tone="light"] .brand-logo{filter:brightness(0)}
+body[data-nav-tone="light"] .brand-en,body[data-nav-tone="light"] #current-title,body[data-nav-tone="light"] .transport-divider,body[data-nav-tone="light"] #total-number,body[data-nav-tone="light"] .keyboard-hint{color:var(--color-muted)}
+body[data-nav-tone="light"] .header-actions small,body[data-nav-tone="light"] .transport-buttons button{border-color:var(--color-rule)}
+body[data-nav-tone="light"] .header-actions small{color:var(--color-muted)}
+body[data-nav-tone="light"] #current-number{color:var(--color-accent-ink)}
+body[data-nav-tone="light"] .progress{background:var(--color-rule)}
+body[data-nav-tone="light"] #progress-fill{background:var(--color-accent-ink)}
+body[data-nav-tone="light"] .masthead button:focus-visible,body[data-nav-tone="light"] .transport button:focus-visible{outline-color:var(--color-accent-ink)}
+@media(max-width:600px){.masthead{height:56px;padding-inline:20px}.brand-logo{width:25px;height:25px}.transport{height:50px;padding-inline:20px}}
