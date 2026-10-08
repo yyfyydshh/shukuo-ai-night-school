@@ -2,5 +2,5 @@
 window.NIGHT_SCHOOL_MEDIA = {
   skill: 'assets/video-skill.mp4',
   remotion: 'assets/remotion-demo.mp4',
-  git: 'assets/git-explainer.mp4'
+  git: 'assets/git-explainer.mp4?v=9'
 };
