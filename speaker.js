@@ -7,6 +7,8 @@
       button.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')show();});button.addEventListener('focus',show);button.addEventListener('click',show);
     });
   }
+  $('#projects-open').addEventListener('click',()=>$('#projects-dialog').showModal());
+  sceneTabs('projects','.project-panel');
   sceneTabs('growth','.growth-panel');sceneTabs('discover','.discover-panel');sceneTabs('gitmode','.git-demonstration');
   let diff=false;
   $('#diff-change').addEventListener('click',()=>{
